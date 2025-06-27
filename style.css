@@ -1,0 +1,192 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  color: hsl(236, 100%, 87%);
+  background-color: hsl(226, 43%, 10%);
+}
+body .container > * {
+  column-span: 1;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 12px;
+}
+body .container {
+  display: grid;
+  width: 90%;
+  height: 60dvh;
+}
+@media (max-width: 600px) {
+  body .container {
+    grid-template-areas: "a" "b" "c" "d" "e" "f" "g";
+  }
+}
+@media (min-width: 600px) {
+  body .container {
+    grid-template-areas: "a b c d" "a e f g";
+  }
+}
+body .activity > * {
+  border-radius: 12px;
+}
+body .activity {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  border-radius: 14px;
+}
+body .activity .svgClass {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body .activity .hrs {
+  background-color: hsl(235, 46%, 20%);
+  z-index: 10;
+  width: 100%;
+  height: 70%;
+  transition: background-color 0.5s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+body .activity .hrs .top-line > * {
+  margin: 20px;
+}
+body .activity .hrs .top-line > span:first-child {
+  color: white;
+}
+body .activity .hrs .top-line {
+  display: flex;
+  justify-content: space-between;
+}
+body .activity .hrs .bottom-line > * {
+  margin: 5px 20px;
+}
+body .activity .hrs .bottom-line > span:first-child {
+  color: white;
+  font-size: 2rem;
+}
+body .activity .hrs .bottom-line {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  body .activity .hrs .bottom-line {
+    flex-direction: column;
+  }
+}
+body .activity .hrs .bottom-line .currentHours {
+  font-size: 2rem;
+}
+body .activity .hrs:hover {
+  background-color: hsl(230, 46%, 30%);
+}
+body .reportContainer {
+  grid-area: a;
+  background-color: hsl(235, 46%, 20%);
+  height: 230px;
+}
+@media (min-width: 600px) {
+  body .reportContainer {
+    height: auto;
+    grid-column: span 1;
+  }
+}
+body .reportContainer .colored-report {
+  display: flex;
+  background-color: hsl(246, 80%, 60%);
+  height: 65%;
+  border-radius: 12px;
+}
+body .reportContainer .colored-report .picture {
+  border-radius: 50%;
+  border: 2px solid white;
+  transform: scale(0.5);
+}
+@media screen and (min-width: 600px) {
+  body .reportContainer .colored-report .picture {
+    width: 130px;
+    height: 130px;
+  }
+}
+body .reportContainer .colored-report .reportJeremy {
+  margin: auto 20px;
+}
+body .reportContainer .colored-report .reportJeremy > :last-child {
+  font-size: 2rem;
+  color: white;
+}
+@media screen and (min-width: 600px) {
+  body .reportContainer .colored-report {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+body .reportContainer .time {
+  font-size: 1.25rem;
+  display: flex;
+  height: 35%;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 600px) {
+  body .reportContainer .time {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+body .reportContainer .time > * {
+  color: hsl(235, 45%, 61%);
+  margin: 0 20px;
+  transition: color 0.5s ease;
+  background-color: hsl(235, 46%, 20%);
+  border: none;
+}
+body .reportContainer .time > *:hover {
+  color: white;
+  cursor: pointer;
+}
+body .workContainer {
+  grid-area: b;
+  background-color: hsl(15, 100%, 70%);
+}
+body .playContainer {
+  grid-area: c;
+  background-color: hsl(195, 74%, 62%);
+}
+body .studyContainer {
+  grid-area: d;
+  background-color: hsl(348, 100%, 68%);
+}
+body .exerciseContainer {
+  grid-area: e;
+  background-color: hsl(145, 58%, 55%);
+}
+body .socialContainer {
+  grid-area: f;
+  background-color: hsl(264, 64%, 52%);
+}
+body .selfCareContainer {
+  grid-area: g;
+  background-color: hsl(43, 84%, 65%);
+}
+
+.hidden {
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+}
+
+/*# sourceMappingURL=style.css.map */

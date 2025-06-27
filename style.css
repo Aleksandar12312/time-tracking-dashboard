@@ -14,14 +14,13 @@ body {
   background-color: hsl(226, 43%, 10%);
 }
 body .container > * {
-  column-span: 1;
   font-size: 18px;
   margin: 10px;
   border-radius: 12px;
 }
 body .container {
   display: grid;
-  width: 90%;
+  width: 80%;
   height: 60dvh;
 }
 @media (max-width: 600px) {
@@ -31,6 +30,7 @@ body .container {
 }
 @media (min-width: 600px) {
   body .container {
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a b c d" "a e f g";
   }
 }
@@ -38,7 +38,7 @@ body .activity > * {
   border-radius: 12px;
 }
 body .activity {
-  height: 200px;
+  height: 220px;
   display: flex;
   align-items: flex-end;
   position: relative;
@@ -87,13 +87,16 @@ body .activity .hrs .bottom-line {
 body .activity .hrs .bottom-line .currentHours {
   font-size: 2rem;
 }
+body .activity .hrs .bottom-line .previousHours {
+  margin-bottom: 15px;
+}
 body .activity .hrs:hover {
   background-color: hsl(230, 46%, 30%);
 }
 body .reportContainer {
   grid-area: a;
   background-color: hsl(235, 46%, 20%);
-  height: 230px;
+  height: 250px;
 }
 @media (min-width: 600px) {
   body .reportContainer {
